@@ -15,3 +15,12 @@ test('any 0 as argument needs to return Null', () => {
 test('any 0 as argument needs to return Null', () => {
     expect(hypotenuse(6, 0)).toBeNull();
 });
+test('any non-number as argument needs to return Null', () => {
+    expect(hypotenuse("6", 4)).toBeNull();
+});
+test('any non-number as argument needs to return Null', () => {
+    expect(hypotenuse("meh", 4)).toBeNull();
+});
+test('any lover then 1 as argument needs to return Null', () => {
+    expect(hypotenuse(-5, 4)).toBeNull();
+});
