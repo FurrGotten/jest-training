@@ -16,6 +16,10 @@ it('needs to return Null if one of arguments is 0', () => {
 it('still needs to return result 10 if one of arguments, 6, 8, is an string', () => {
     expect(hypotenuse("6", 8)).toBe(10);
 });
+it('needs to return close to 11 with both ', () => {
+    expect(hypotenuse(6.8, "8.7")).toBeCloseTo(11, 0);
+    expect(hypotenuse("6.8", "8.7")).toBeCloseTo(11, 0);
+});
 it('any non-number as argument needs to return Null', () => {
     expect(hypotenuse("meh", 4)).toBeNull();
 });
